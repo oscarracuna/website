@@ -27,4 +27,5 @@ func NewHandlers(r *Repository) {
 // Functions that start with Capital Letter are global
 func (m *Repository) Home(w http.ResponseWriter, r *http.Request) {
 	render.RenderTemplate(w, "home.page.tmpl", nil)
+	render.RenderTemplate(w, "css.page.tmpl", nil)
 }
