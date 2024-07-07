@@ -23,9 +23,6 @@ func main() {
 	}
 
 	app.TemplateCache = tc
-	// This right here determines if we're in developer mode or prod
-	// false = dev mode so we can make changes and see them immediately
-	// true = prod
 	app.UseCache = false
 
 	repo := handlers.NewRepo(&app)
@@ -33,6 +30,7 @@ func main() {
 
 	render.NewTemplates(&app)
 
+	http.HandleFunc("/", handlers.Repo.Home)
 	fmt.Printf("App starting on port %s", portNumber)
 	_ = http.ListenAndServe(portNumber, nil)
 
