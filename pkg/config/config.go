@@ -1,7 +1,7 @@
 package config
 
 import (
-	"html/template"
+	"text/template"
 )
 
 type AppConfig struct {
