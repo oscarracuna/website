@@ -6,7 +6,12 @@ import (
 	"net/http"
 	"path/filepath"
 	"text/template"
+
+	"github.com/oscarracuna/website/pkg/config"
+	"github.com/oscarracuna/website/pkg/models"
 )
+
+var app *config.AppConfig
 
 func NewTemplates(a *config.AppConfig) {
 	app = a
