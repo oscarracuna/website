@@ -1,5 +1,10 @@
 package main
 
+// TODO Figure out HTMX
+// TODO Simplify landing page
+// TODO Find better color palette
+
+
 import (
 	"fmt"
 	"log"
